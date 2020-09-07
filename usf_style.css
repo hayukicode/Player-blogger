@@ -1,0 +1,1380 @@
+ /*
+Nome Thema: AnihallAnimes
+URL Thema: https://anihallanimes.site 
+Author: WorkLab
+Author URI: http://facebook.com/WorkLab
+Version: 1;0
+*/
+ 
+ 
+ /*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
+  }
+
+/* Scroll */
+/* width */ ::-webkit-scrollbar { width: 10px; }
+
+/* Track */ ::-webkit-scrollbar-track { box-shadow: inset 0 0 15px rgb(51, 51, 51); border-radius: 1px; }
+
+/* Handle */ ::-webkit-scrollbar-thumb { background: rgb(61, 177, 255); border-radius: 1px; }
+
+/* Handle on hover */ ::-webkit-scrollbar-thumb:hover { background: rgb(0, 66, 165); }
+
+@-webkit-keyframes bounceInLeft { 0% { opacity: 0; -webkit-transform: translateX(-2000px);  } 60% { opacity: 1; -webkit-transform: translateX(30px); } 80% { -webkit-transform: translateX(-10px); } 100% { -webkit-transform: translateX(0); } }
+@keyframes bounceInLeft { 0% { opacity: 0; transform: translateX(-2000px); }  60% { opacity: 1; transform: translateX(30px); } 80% { transform: translateX(-10px); } 100% { transform: translateX(0); } }
+
+@-webkit-keyframes bounceInRight { 0% { opacity: 0; -webkit-transform: translateX(2000px); } 60% { opacity: 1; -webkit-transform: translateX(-30px); } 80% { -webkit-transform: translateX(10px); } 100% { -webkit-transform: translateX(0); } }
+@keyframes bounceInRight { 0% { opacity: 0; transform: translateX(2000px); } 60% {  opacity: 1; transform: translateX(-30px); } 80% { transform: translateX(10px); } 100% { transform: translateX(0); } }
+
+@-webkit-keyframes fadeInRight { 0% { opacity: 0; -webkit-transform: translateX(20px); } 100% { opacity: 1; -webkit-transform: translateX(0); } } 
+@keyframes fadeInRight { 0% { opacity: 0; transform: translateX(20px);} 100% { opacity: 1; transform: translateX(0); } }
+
+@-webkit-keyframes fadeInLeft { 0% { opacity: 0; -webkit-transform: translateX(-20px); } 100% { opacity: 1; -webkit-transform: translateX(0); } }
+@keyframes fadeInLeft { 0% { opacity: 0; transform: translateX(-20px); } 100% { opacity: 1; transform: translateX(0); } } 
+  
+
+
+/* HTML */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu-Regular;
+    margin: auto;
+	text-decoration: none; 
+}
+  
+/* Container */
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+} 
+        @media (min-width: 1170px) {
+            .container {
+                max-width: 1170px;
+                padding: 0;
+            }
+        }
+        
+
+        .capa-anime { 
+            display:block; 
+            width: 130px;  
+            height: 219px;  
+            border-radius: 2px;
+            background-size: cover; 
+            background-position: center;  
+        }
+/* Linhas */
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+    .row::before,
+    .row::after {
+        content: "";
+        display: table;
+    }
+    .row::after {
+        clear: both;
+    }
+
+/* Colunas */
+
+.colani {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left:  5px;
+    padding-right:  5px; 
+    width: 100%; 
+      
+    *zoom: 1;
+    *display: inline;
+}
+
+    @media (min-width: 480px) {
+        
+    .col-2 {
+  
+    width: 50%;
+  
+        }
+    } 
+
+    @media (min-width: 728px) {
+    .col-3 {
+        width: 33.3333%;
+    }
+}
+
+    @media (min-width: 992px) {
+        .col-content {
+            width:70%;
+        }
+
+        .col-sidebar {
+            width:30%;
+        }
+    }
+
+    .search { width: 100%; box-sizing: border-box; border: 0px solid #ccc; border-radius: 2px;  font-size: 12px;  background-color: rgb(230, 230, 230); color: rgb(24, 24, 24); *background-image: url('https://www.w3schools.com/howto/searchicon.png'); *background-position: right 10px center;  background-repeat: no-repeat; padding: 10px 60px 10px 15px; -webkit-transition: width 0.4s ease-in-out;  transition: width 0.4s ease-in-out; -moz-transition: width 0.4s ease-in-out; box-shadow: 0 2px 4px 0 rgba(0,0,0,.10), 0 0 2px 0 rgba(0,0,0,.12); } /*.search:focus  { width: 100%; }*/
+
+#busca form button { background: #da2525 center no-repeat; width: 50px; height: 38px; border: 0; position: relative; border-radius: 0 50px 50px 0; cursor: pointer; *margin-left: -60px; margin-top: -38px; float: right; border: 2px solid #f44336 }
+
+/* Demo */
+
+.anibox {  
+    margin: 10px 0;
+    padding:   5px;
+    color: #f2f2f2; 
+}
+ 
+/* Textos */
+
+hr.one { 
+    border: 0; 
+    height: 0; 
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid #333; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+.text { 
+    font-size: 11px; 
+    text-align: center;
+}
+.text1 {
+    font-size: 13px;
+}
+.text2 {
+    font-size: 14px;
+}
+.text3 {
+    font-size: 16px;
+     margin-top: 10px;
+     font-family: Ubuntu-Regular;
+     width: auto;
+     padding-bottom: 5px; 
+}
+ 
+ 
+  
+/* Menu */
+ 
+
+.mHeader { 
+    background: url(https://anihallanimes.site/image/bgfooter.jpg);
+    color: #fff;
+    -webkit-box-shadow: 3px 3px 4px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 4px -4px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 4px -4px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}
+
+.mHeader .mwidth { 
+    padding: 40px 0;
+    position: relative;
+    }
+    .menuMobile {
+    background: url(https://anihallanimes.site/image/icons/menu.png);
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+    display: none;
+    }
+    .menuMobile.active {
+    background: url(https://anihallanimes.site/image/icons/close.png);
+    }
+    .logo {
+    background: url(https://anihallanimes.site/image/icons/logo.png) center no-repeat;
+    background-size: 100%;
+    
+    width: 165px;
+    height: 38px;
+    position: absolute;
+    top: -15px;
+    left: 150px;
+    bottom: 0;
+    margin: auto 0;
+    }
+     
+    .mainNav {
+    text-transform: uppercase;
+    font-size: 14px; 
+     
+    text-align: center; 
+    }
+    .mainNav.absolute {
+    position: absolute;
+    right: 0;
+    }
+    .mainNav a {
+    padding: 5px 10px;
+    transition: .2s all; 
+    margin-right: 5px; 
+    font-weight: 700; 
+    color: #fff;
+    text-decoration: none;
+    }
+    .mainNav a:hover {
+    background:#134BF2;
+    border-radius: 2px;
+    color: #fff;
+    }
+    .mainNav a:last-child {
+    margin-right: 0;
+    }
+    .mainNav a.current {
+    color: #fff;
+    background: #134BF2;
+    }
+
+    
+    .mainNavs {
+        text-transform: uppercase;
+        font-size: 14px; 
+         text-align: right; 
+         margin-top: -20px;
+         margin-right:  30px
+        }
+        .mainNavs.absolute {
+        position: absolute;
+        right: 0;
+        }
+        .mainNavs a {
+        padding: 5px 10px;
+        transition: .2s all; 
+        margin-right: 5px; 
+        font-weight: 700; 
+        color: #fff;
+        text-decoration: none;
+         
+        }
+        .mainNavs a:hover {
+        background:#134BF2;
+        border-radius: 2px;
+        color: #fff;
+        }
+        .mainNavs a:last-child {
+        margin-right: 0;
+        }
+        .mainNavs a.current {
+        color: #fff;
+        background: #134BF2;
+        }
+ 
+    /* Media Query 930px */
+  @media only screen and (max-width: 930px) {
+      /* Especiais */
+      .isMobile {
+      display: block;
+      }
+      /* Header */
+      .mainNav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      background: #222;
+      z-index: 999999;
+      width: 100%;
+      left: 0;
+      padding: 10px;
+      height: auto;
+      }
+      .mainNav a {
+      text-align: center;
+      padding: 10px 0;
+      display: block;
+      margin-top: 20px;
+      }
+      .mainNav.absolute {
+      display: block;
+      background: transparent;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      left: initial;
+      }
+
+      .mainNavs {
+        display: none;
+        position: absolute;
+        top: 60px;
+        background: #222;
+        z-index: 999999;
+        width: 100%;
+        left: 0;
+        padding: 10px;
+        height: auto;
+        }
+        .mainNavs a {
+        text-align: center;
+        padding: 10px 0;
+        display: block;
+        margin-top: 20px;
+        }
+        .mainNavs.absolute {
+        display: block;
+        background: transparent;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        left: initial;
+        }
+      
+      .iconSearch {
+      right: 10px;
+      left: initial;
+      }
+      .iconSearch.active {
+      left: initial;
+      }
+      .logo {
+      height: 38px;
+      background-position: 0 0px;
+      bottom: 0;
+      top: 5px;
+      right: 150px;
+      margin: auto;
+      }
+      .menuMobile {
+      display: block;
+      }
+      .mainNav.absolute a {
+      display: none;
+      }
+      .mainNavs.absolute a {
+        display: none;
+        }
+  } 
+
+  /* Capa animes*/
+
+  
+  ul.Lancamentos { 
+      margin: 0px; 
+      padding: 0px; 
+    }
+  .Lancamentos li { 
+      display: inline-block; 
+      width: 100px;   
+      color: rgb(41, 39, 39);  
+       padding: 5px;  
+    }
+  ul.Lancamentos a { 
+      text-decoration: none; 
+    }
+  
+  .Lancamentos li h1 { 
+      margin: 0px; 
+      padding: 0px; 
+      line-height: 1.5em; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      text-overflow: ellipsis; 
+      color: #ccc
+    }
+  .Lancamentos li h2 { 
+      margin: 0px; 
+      padding: 0px; 
+      line-height: 1.5em; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      text-overflow: ellipsis; 
+      color: #ccc
+    }
+  .Lancamentos li h3 { 
+      margin: 0px; 
+      padding: 0px; 
+      line-height: 1.5em; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      text-overflow: ellipsis; 
+      color: #ccc;
+    }
+ 
+    .aniItem {
+        width: 195px; 
+        padding: 15px;   
+        float: left; 
+        display:block; 
+    background-size: cover; 
+    background-position: center;   
+    position: relative;  
+        }
+     
+        .aniImg {
+        width: 100%; 
+         
+        height: 250px;  
+        position: relative;
+            }
+        .aniImg::before {
+            content: '';
+            width: 100%;
+            height: 155px;
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0);
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1)));
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+        }
+        .aniImg img { 
+        width: 100%;
+         
+        height: 100%;
+        display: block;
+        
+        }
+        .anilegendado {
+        position: absolute;
+        bottom: 220px;
+        left: 0;
+        right: 0; 
+        margin: 0 auto;
+        width: 90%;
+        color: #fff; 
+        padding: 1px 0;
+        text-align: center;
+        opacity: 0.6;
+        background: #131212;
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 11px;
+        }
+        .anilegendados {
+            position: absolute;
+            bottom: 11px;
+            left: 0;
+            right: 0; 
+            margin: 0 auto;
+            width: 90%;
+            color: #fff;
+            border-radius: 5px;
+            padding: 1px 0;
+            text-align: center;
+            opacity: 0.9;
+            background: #0649da;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-size: 13px;
+            }
+        .aniNome { 
+            font-weight: bold;
+            font-family: Ubuntu-Regular;
+            font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #f2f2f2;  
+        text-overflow: ellipsis;
+        } 
+      
+    .capa-animes { 
+        display:block; 
+        width:75px;  
+        height: 120px;   
+        background-size: cover; 
+        background-position: center;  
+    }
+    ul.Lancamento { 
+        margin: 0px; 
+        padding: 0px; 
+      }
+    .Lancamento li { 
+        display: inline-block;  
+        color: rgb(41, 39, 39);   
+        margin-top: -16px;
+      }
+    ul.Lancamento a { 
+        text-decoration: none; 
+      }
+      .aniContainer {
+        max-width: 1280px;
+        margin: 0 auto 30px auto;
+        padding: 50px 10px 20px 10px;
+        border: 2px solid #da062e;
+        position: relative;
+        }
+    .Lancamento li h1 { 
+        margin: 0px; 
+        padding: 0px; 
+        line-height: 1.5em; 
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        color: #ccc
+      }
+    .Lancamento li h2 { 
+        margin: 0px; 
+        padding: 0px; 
+        line-height: 1.5em; 
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        color: #ccc
+      }
+    .Lancamento li h3 { 
+        margin: 0px; 
+        padding: 0px; 
+        line-height: 1.5em; 
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        color: #ccc;
+      }
+      a.link-lancamento:hover{
+        background: #1a1719; 
+        transition: .5s;
+        }
+      
+        a.link-lancamento { 
+        text-decoration: none; 
+        color: #333;
+         display:block; 
+        padding: 5px 5px 5px 5px;
+        }
+        a.link-lancamentoo:active {
+         background-color: #333;
+         }
+    a.link-lancamentos:hover{
+   
+    transition: .5s;
+    }
+  
+    a.link-lancamentos { 
+    text-decoration: none; 
+    color: #333; display:block; 
+    padding: 8px 2px 8px  10px;
+    }
+    a.link-lancamentos:active {
+     background-color: #333;
+     }
+ 
+     /* Footer */
+     .footer {    
+         background: linear-gradient(
+            to top,
+            rgba(13, 13, 13, 0.699),
+            rgba(13,13,13, 22)
+          ),url('https://anihallanimes.site/image/banners/back.jpg');
+        padding: 60px; 	
+        width: 100%;  
+        bottom: 0;
+        left:0; 
+        position: relative;
+    } 
+  
+    .copyrightText {
+        background: #000;
+        padding: 10px; 	
+        width: 100%;  
+        text-decoration: none;
+        bottom: 0;
+        color: #f2f2f2;
+        left:0; 
+        position: relative;
+        text-align: center;
+        font-size: 13px;
+        }
+
+.logoAutor {
+    position: absolute;
+    right: 5%;
+    bottom: 15px;
+    overflow: hidden;
+    cursor: pointer; 
+}
+
+.logoAutor img {
+    width: 19px;
+    height: 13px;
+    transition-duration: 1s;
+}
+
+.logoAutor img:first-child {
+    width: 22px;
+    height: 30px;
+    transform: translateX(100px);
+    transition-property: all;
+    transition-duration: .5s;
+    transition-delay: 1.2s;
+    margin: 0;
+}
+
+.logoAutor img:nth-child(2n) {
+    transform: translateY(10px);
+    transition-property: all;
+    opacity: 0;
+    transition-delay: .5s;
+}
+
+.logoAutor img:nth-child(3n) {
+ 
+    transform: translateY(10px);
+    transition-property: all;
+    opacity: 0;
+    transition-delay: .5s;
+    margin: auto 0 0 -3px;
+}
+
+.logoAutor .meio {
+    transform: translateY(10px);
+    transition-property: all;
+    opacity: 0;
+    transition-delay: .5s;
+}
+
+.logoAutor:hover .meio {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-delay: .4s;
+}
+
+.logoAutor:hover img:first-child {
+    transform: translateX(0px);
+    transition-delay: .1s;
+}
+
+.logoAutor:hover img:nth-child(2n) {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-delay: .4s;
+}
+
+.logoAutor:hover img:nth-child(3n) {
+    transform: rotate(0) translateX(0) translateY(-0px);
+    opacity: 1;
+    transition-delay: .4s;
+}
+
+         /* Fim Footer */
+        .AniItem {
+        width: 300px;
+        position: relative;
+        display: inline-table; 
+        overflow: hidden;
+        margin: 0 5px 10px 0;
+        }
+        .AniItem a {
+        text-decoration: none;
+        }
+        .AniItem {
+        width: 300px;
+        height: 168px;
+        overflow: hidden;
+        }
+        .AniItem img {
+        width: 300px;
+        height: 168px;
+        transition: .5s all;
+        }
+        .AniItem:hover img {
+        filter: blur(2px);
+        }
+        .AniInfo {
+        background: #2E6FF2;
+        padding: 5px;
+        position: absolute;
+        left: 0px;
+        right: 195px;
+        margin: auto;
+		color: #fff;
+        max-width: 20%;
+        z-index: 99;
+        margin-top:  15px;
+        text-align: center;
+        border-radius: 3px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        }
+       
+			
+    .AniItem .uPlay {
+        content: "";
+        background: url(http://localhost/AnihallAnimes/image/icons/Play.png) no-repeat;
+        background-size: contain;
+        display: block;
+        width: 58px;
+        height: 58px;
+        position: absolute;
+        align-items: center;
+        margin: -40%  40% 0;
+    }
+        .AniDesc {
+        padding: 5px;
+        height: 90px;
+        max-height: 90px;
+        word-wrap: break-word;
+        text-align: left;
+        color: #f2f2f2;   
+        font-size: 14px;
+        text-align: left;
+        text-decoration:none;
+        font-family: Ubuntu-Bold; 
+        }
+       
+        /*Data*/
+        .data {
+        float: right;
+        margin-bottom: 10px;
+        width: 100%;
+        font-weight: bold;
+        }
+        .data > span {
+        float: left;
+        font-size: 12px;
+        }
+        .data > i {
+        background: rgba(0, 0, 0, 0) url("img/cssprite.png?v=1.0.0") no-repeat scroll -150px -82px;
+        display: block;
+        float: left;
+        height: 13px;
+        margin-right: 5px;
+        margin-top: 2px;
+        width: 17px;
+        }
+
+
+        .AniItems {
+            width: 300px;
+            position: relative;
+            display: inline-table; 
+            overflow: hidden;
+            margin: 0 5px 10px 0;
+            }
+            .AniItems a {
+            text-decoration: none;
+            }
+            .AniItems {
+         
+width: 300px;
+height: 168px;
+            overflow: hidden;
+            }
+            .AniItems img {
+           
+width: 300px;
+height: 168px;
+            transition: .5s all;
+            }
+          
+            .AniItems:hover img {
+            filter: blur(2px);
+            }
+            .AniInfos {
+            background: #2E6FF2;
+            padding: 8px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            max-width: 80%;
+            z-index: 99;
+            margin-top: 125px;
+            text-align: center;
+            border-radius: 3px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            }
+            .AniDescs {
+            padding: 5px;
+            height: 330px;
+            max-height: 90px;
+            word-wrap: break-word;
+            text-align: left;
+            color: #f2f2f2;   
+            font-size: 14px;
+            text-align: left;
+            text-decoration:none;
+            font-family: Ubuntu-Bold; 
+            }
+           
+.AniEps {
+    text-align: center;
+    margin-top: 10px;
+    max-width:  2040px; 
+    }
+            /*Data*/
+            .datas {
+            float: right;
+            margin-bottom: 10px;
+            width: 100%;
+            font-weight: bold;
+            }
+            .datas > span {
+            float: left;
+            font-size: 12px;
+            }
+            .datas > i {
+            background: rgba(0, 0, 0, 0) url("img/cssprite.png?v=1.0.0") no-repeat scroll -150px -82px;
+            display: block;
+            float: left;
+            height: 13px;
+            margin-right: 5px;
+            margin-top: 2px;
+            width: 17px;
+            }
+     
+     /* Thumb Eps Lancamentos */
+     .capa-episodio { 
+         display:block;  
+         width: 150px; 
+         background-color: #333; 
+         height: 100px;  
+         background-size: cover;   
+         background-position: center;  
+        }
+  
+            .play {
+                background: url("./image/play.png") no-repeat;
+                display: block;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                z-index: 99;
+                
+                left: 0;
+                right: 0;
+                top: 61px;
+                margin: auto;
+                }
+                .play:hover {
+                    filter: blur(1px);
+                    }
+                    /*Data*/
+.anidata {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    }
+    .anidata > span {
+    float: left; 
+    font-size: 12px;
+    }
+    
+      /*Animação*/
+    .animationfadeLeft { -webkit-animation-name: fadeInLeft; animation-name: fadeInLeft; }
+.animationfadeRight { -webkit-animation-name: fadeInRight; animation-name: fadeInRight; }
+.animationRight { -webkit-animation-name: bounceInRight; animation-name: bounceInRight; }
+.animationLeft { -webkit-animation-name: bounceInLeft; animation-name: bounceInLeft; }
+ 
+.speed0 { -webkit-animation-duration: .25s; animation-duration: .25s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.speed1 { -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.speed2 { -webkit-animation-duration: 1.0s; animation-duration: 1.0s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.speed3 { -webkit-animation-duration: 1.5s; animation-duration: 1.5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.speed4 { -webkit-animation-duration: 2.0s; animation-duration: 2.0s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.speed5 { -webkit-animation-duration: 2.5s; animation-duration: 2.5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+
+
+.image-banner{
+    width:100%;
+    clear: both;
+    vertical-align: middle;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    margin-top: 40px;
+    height: 50%;
+}
+.img-banner{
+    opacity: .4;
+    width:100%;  
+    display: inline-block;
+    position: relative; 
+     
+}
+	
+.generos-animes{
+    background-color: #ff0000;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s;
+    margin: 5px;
+    border:none;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.generos-animes:hover {
+    background-color: #a10000;
+    Color:#ffffff;
+    transition: all 0.3s;
+}
+.infos-anime{
+	position: relative;
+	clear:both;
+	width: 100%; 
+}
+
+
+#back-anime{
+	clear: both;
+	width: 100%;
+	background-color: #1f1f1f;
+	padding-bottom: 40px;
+	margin-top:-10px;
+}
+.tabAnime h1 { font-size: 18px; font-weight: normal; margin: 0px; line-height: 1.5em }
+.tabAnime h2 { font-size: 12px; font-weight: normal; margin: 0px; line-height: 1.5em }
+ 
+/*  Lista de Episódios */
+.mains {
+padding: 0px;
+}
+div .single .left section#anime {
+    text-align: left;
+    padding: 5px;
+    background-color: rgb(32, 31, 31);
+   
+    margin: 5px 0;
+    
+    }
+    div .single .left section#anime #capaAnime {
+    float: left;
+    margin-right: 7px;
+    }
+    div .single .left section#anime #capaAnime img {
+    max-height: 335px;
+    content: '';
+    width: 100%; 
+     bottom: 0; 
+       height: 335px;
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid #2E6FF2;
+    margin-bottom: 10px;
+    }
+    div .single .left section#anime div.boxAnimeSobre {
+    overflow: hidden;
+    font-size: 13px;
+    }
+    div .single .left section#anime div.boxAnimeSobre .boxAnimeSobreLinha {
+    border-bottom: 2px solid #353535;
+    border-radius: 10px;
+    padding: 10px;
+    
+    }
+    div .single .left section#anime a {
+    color: #2E6FF2;
+    
+    text-decoration: none;
+    }
+    div .single .left section#anime #sinopse2 {
+    background: #191a1b none repeat scroll 0 0; 
+    margin-top: 25px; 
+    padding: 15px;
+    clear: both;
+    font-weight: bold;
+    
+    font-family: Ubuntu-Bold;
+    font-size: 13px;
+    }
+   
+    /* Lista de EpisÃ³dios / Ovas Filmes */
+.AniLista {
+    padding: 10px;
+    background-color: rgb(32, 31, 31);
+    margin-bottom: 5px;
+    }
+   
+    .AniEpitem {
+    color: #fff; 
+    border-bottom: 1px solid #282828;
+    padding: 5px;
+    margin: 0px -10px 3px -10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    }
+    .AniEpitem a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 4px;
+    margin: 4px;
+    overflow: hidden;
+    font-family: Ubuntu-Bold;
+        
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+    .AniEpitem a:hover {
+        color: rgb(22, 181, 255);
+        }
+    .AniEpitem a:visited{
+    color: #2E6FF2;
+    }
+    .abreListaEpisodiosAtivo::before {
+    transform: rotate(-90deg);
+    content: '\276E';
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    }
+    .abreListaEpisodiosInativo::before {
+    transform: rotate(90deg);
+    content: '\276E';
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    }
+    .abreListaOvasAtivo::before {
+    transform: rotate(-90deg);
+    content: '\276E';
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    }
+    .abreListaOvasInativo::before {
+    transform: rotate(90deg);
+    content: '\276E';
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    }
+    .abreListaFilmesAtivo::before {
+    transform: rotate(-90deg);
+    content: '\276E';
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    }
+    .abreListaFilmesInativo::before {
+    transform: rotate(90deg);
+    content: '\276E';
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    }
+    .EPTitulo {
+        background: -webkit-linear-gradient(to right, #0066ff, #00f7ff);
+        background: linear-gradient(to right, #0529c9, #0066ff);
+        padding: 5px;
+        text-align: left;
+        font-weight: bolder;
+        margin: -5px  0px 5px;
+        position: relative;
+        }
+    .alinhamento {
+        width: 100%;
+        }
+
+        .capa-episodios { display:block; width: 130px; background-color: #333; height: 209px; margin-top: 10px; background-size: cover; background-position: center;  }
+ 
+    /* BLOCOS TEXTOS */
+    .bloco-black { background-color: #222; *text-shadow: 1px 1px 3px #333; margin-top: 5px; margin-bottom: 10px; padding: 10px; border-radius: 2px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.10), 0 0 2px 0 rgba(0,0,0,.12); text-decoration: none; *border-left: 3px solid #da2525; }
+
+    
+.bloco {
+    background-color: #fff;
+    *text-shadow: 1px 1px 3px #333;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.10), 0 0 2px 0 rgba(0,0,0,.12);
+    text-decoration: none;
+    *border-left: 3px solid #f30909;
+}
+.bloco-hover:hover {
+    background-color: #2E6FF2;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    text-decoration: none;
+    color: #fff !important;
+    *border-left: 3px solid #fff;
+}
+ .bloco-blue { 
+    background-color: rgb(34, 99, 219); 
+    color: #fff;
+}
+.bloco-bluew { 
+    background-color: rgb(23, 87, 204); 
+    color: #fff;
+}
+.bloco-white a { 
+    color: #fff; 
+}
+
+.bloco-green { 
+    background-color: #3a9a3e; 
+    color: #fff;
+ }
+.bloco-yellow { 
+    background-color: #ffae00; 
+    color: #633b00;
+ }
+.bloco-red { 
+    background-color: #ff1100; 
+    color: #ffffff; 
+}
+ 
+
+		
+			
+.aniepthumb{
+    font-family: "Open Sans";
+    text-align:left;
+}
+
+.aniepthumb .ep-nome{
+    color:white;
+    transition: all 0.2s;
+    text-decoration:none;
+}
+
+.aniepthumb .ep-nome:hover{
+      color: #b28ff3;
+      transition: all 0.2s;
+      text-decoration:none;
+}
+#anime-nome{
+    font-size:14px;
+    color:white;
+} 
+.aniepthumb .thum a{
+			
+    font-weight:600;
+    font-family: "Open Sans";
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.15s linear 0s;
+}
+
+.aniepthumb .thumb a:hover{
+    
+    font-family: "Open Sans";
+    color:#e1443f;
+    text-decoration: none;
+}
+
+.thumb:hover{
+    opacity:1;
+    transition: all 0.2s;
+}
+
+.thumb-link{
+    position:relative;
+    top:2px;
+    font-weight: 700;
+    color: white;
+}
+
+.thumb-a-holder{
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+.thumb-a:hover{
+    text-decoration:none;
+}  
+
+
+
+/* LOGIN */
+
+
+.contact-form{
+    background: rgb(34, 85, 253);
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+.clear{clear: both;} /* CLEARFIX */
+.left{float: left;}
+.right{float: right;}
+
+.conteiner{width: 480px;}
+
+
+
+/* VIDEO PLAYER*/
+.player-video{position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow:hidden; background-color: #000;}
+.player-video video{float: left; width: 100%; }
+.player-video .loader{position: absolute; display: none; width:50px; height: 50px; text-align: center; padding-top: 8px; top: calc(50% - 25px); left: calc(50% - 25px); background-color: #111; border-radius:5px; }
+
+.player-video .loader span{display: block; color: #fff; font-size: 2.2em; animation: spin 2s linear infinite;}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.player-video:hover .controls{opacity: 1;}
+
+.player-video .controls{
+    position: absolute; width: 100%; left: 0; bottom: 0;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    background: -o-linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    background: -moz-linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    background: linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.player-video .progress-bar{position: relative; float: left; width: 100%; height: 4px; background-color: rgba(255,255,255,0.5); cursor: pointer;}
+
+.player-video .video-loaded{position: absolute; top: 0; left: 0; height: 4px; width:0%; background-color: rgba(255,255,255,0.8);}
+
+.player-video .video-progress{position: absolute; top: 0; left: 0; height: 4px; width: 0%; background-color: dodgerblue;}
+
+.player-video .video-progress span{position: relative; float: right; top: -5px; right: -7px; width: 14px; height: 14px; background-color: dodgerblue; border-radius: 50%;}
+
+.player-video .control{padding: 6px 0; min-width: 40px; text-align: center; cursor: pointer; margin-left: 5px; margin-left: 5px;}
+.player-video .control span{color: #fff; font-size: 1.5em;}
+
+.player-video .slider{
+    position: relative;
+    float: left; 
+    text-align: center;
+    cursor: pointer;
+    height: 35px;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+.player-video .slider .back{
+    position: relative; 
+    background-color: rgba(255,255,255,0.6);
+    width:70px; height: 5px;
+    margin-top: 15px;
+}
+.player-video .slider .bar{position: relative; background-color: #fff; height: 5px; width: 90%;}
+.player-video .slider span{position: relative; float: right; background-color: #fff; width: 13px; height: 13px; border-radius: 50%; top: -4px; right: -6px;}
+.player-video .audio:hover{}
+
+.player-video .time{padding: 8px 10px; cursor: default; margin-top: 4px; margin-left: 15px;}
+.player-video .time .time-video{float: left; color: #fff; font-size: 0.9em; font-weight: 100;}
+
+
+
+/* Abas */
+#Abas {
+    padding: 10px 0px 0px 10px;
+    }
+    #Abas ul {
+    list-style: none;
+    
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px; 
+    }
+    #Abas li {
+    display: inline-block;
+    margin: 3px;
+    padding: 8px;
+    background: rgb(7, 68, 182);
+    border-radius: 3px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    }
+    #Abas li a{
+        color: #fff;
+        font-weight: bold;
+    text-decoration: none;
+    }
+
+    .carousel-item img {
+          
+        background-image: linear-gradient(to bottom, rgba(13, 13, 13, 0.699), rgba(13,13,13, 22))
+    }   
